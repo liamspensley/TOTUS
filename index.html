@@ -1,44 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Hello World</b></span></h1>
-<p class="p2"><span class="s1">I'm hosted with GitHub Pages.</span></p>
-<p class="p2"><span class="s1">&lt;body onload="startTime()"&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;h2&gt;JavaScript Clock&lt;/h2&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;div id="txt"&gt;&lt;/div&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;script&gt;</span></p>
-<p class="p2"><span class="s1">function startTime() {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>const today = new Date();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>let h = today.getHours();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>let m = today.getMinutes();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>let s = today.getSeconds();</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>m = checkTime(m);</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>s = checkTime(s);</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('txt').innerHTML =<span class="Apple-converted-space">  </span>h + ":" + m + ":" + s;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>setTimeout(startTime, 1000);</span></p>
-<p class="p2"><span class="s1">}</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">function checkTime(i) {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>if (i &lt; 10) {i = "0" + i};<span class="Apple-converted-space">  </span>// add zero in front of numbers &lt; 10</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>return i;</span></p>
-<p class="p2"><span class="s1">}</span></p>
-<p class="p2"><span class="s1">&lt;/script&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
+  
+Hello World
+I'm hosted with GitHub Pages.
+<body onload="startTime()">
+ 
+<h2>JavaScript Clock</h2>
+ 
+<div id="txt"></div>
+ 
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+ 
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+ 
 </body>
 </html>
